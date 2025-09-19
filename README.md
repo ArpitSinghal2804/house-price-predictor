@@ -57,6 +57,9 @@ To begin, ensure the following tools are installed on your system:
 
    ```bash
    uv venv --python python3.11
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+   & .\.venv\Scripts\Activate.ps1
+
    source .venv/bin/activate
    ```
 
@@ -74,7 +77,7 @@ To track experiments and model runs:
 
 ```bash
 cd deployment/mlflow
-docker compose -f mlflow-docker-compose.yml up -d
+docker compose -f docker-compose.yaml up -d
 docker compose ps
 ```
 
