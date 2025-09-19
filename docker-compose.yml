@@ -5,13 +5,13 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8080:8080
+      - 8000:8000
   streamlit:
     image: streamlit:dev
     build:
       context: ./streamlit_app
       dockerfile: Dockerfile
     ports:
-      - 8051:8051
+      - 8501:8501
     environment:
       API_URL: http://fastapi:8080
