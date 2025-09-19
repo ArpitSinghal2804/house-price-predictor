@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY /src/api/ .
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 COPY models/trained/*.pkl models/trained/
 
