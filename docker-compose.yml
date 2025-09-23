@@ -14,4 +14,4 @@ services:
     ports:
       - 8501:8501
     environment:
-      API_URL: http://fastapi:8080
+      API_URL: http://fastapi:8000
