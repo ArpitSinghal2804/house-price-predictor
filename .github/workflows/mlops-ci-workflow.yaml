@@ -40,6 +40,10 @@ jobs:
             --output data/processed/featured_house_data.csv \
             --preprocessor models/trained/preprocessor.pkl
       
+      - name: Start MLflow Server
+        run: |
+          nohup mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns --host
+
       - name: Train Model
         run: |
           python src/models/train_model.py \
