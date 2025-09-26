@@ -1,9 +1,6 @@
 name: Streamlit CI
 
 on:
-  push:
-    paths:
-    - 'streamlit_app/**'
   workflow_dispatch:
 
 jobs:
